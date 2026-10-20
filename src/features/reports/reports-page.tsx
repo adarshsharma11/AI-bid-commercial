@@ -72,8 +72,8 @@ export function ReportsPage() {
       >
         {view ? (
           <div className="grid gap-4">
-            <div className="grid gap-4 lg:grid-cols-5">
-              <section className="border-line bg-surface rounded-2xl border p-4 shadow-[var(--shadow-panel)] lg:col-span-3">
+            <div className="grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(16rem,22rem)]">
+              <section className="border-line bg-surface rounded-2xl border p-4 shadow-[var(--shadow-panel)]">
                 <div className="mb-2 flex items-start justify-between gap-3">
                   <div>
                     <h2 className="text-sm font-semibold">Bid value by month</h2>
@@ -478,8 +478,8 @@ function RecentBids({
     .sort((left, right) => right.bidDueAt.localeCompare(left.bidDueAt))
     .slice(0, 6);
   return (
-    <section className="border-line bg-surface flex flex-col overflow-hidden rounded-2xl border shadow-[var(--shadow-panel)] lg:col-span-2">
-      <ul className="divide-line min-h-0 flex-1 divide-y">
+    <section className="border-line bg-surface overflow-hidden rounded-2xl border shadow-[var(--shadow-panel)]">
+      <ul className="divide-line divide-y">
         {rows.length === 0 ? (
           <li className="text-muted px-4 py-6 text-sm">No demo bids in this window.</li>
         ) : (
